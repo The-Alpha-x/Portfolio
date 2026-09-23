@@ -178,13 +178,13 @@ export default function Home() {
         {/* Hero Section */}
         <section id="about" className="flex-1 flex flex-col justify-center items-center text-center px-4 sm:px-6 py-8 sm:py-12 w-full mx-auto max-w-7xl">
 
-          <div className="flex flex-col lg:flex-row justify-center items-center w-full gap-6 lg:gap-4">
+          <div className="flex flex-col lg:flex-row justify-center items-center w-full gap-6 lg:gap-2 xl:gap-4">
             {/* Front End Section */}
             <div className="flex justify-center lg:justify-end items-center w-full flex-1">
-              <div className="flex-1 flex flex-col items-center lg:items-end text-center lg:text-right space-y-2 sm:space-y-4 p-2 sm:p-6 rounded-2xl group/frontend">
-                <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-wide leading-tight transition-all duration-300 transform group-hover/frontend:scale-105 cursor-pointer">
+              <div className="flex-1 flex flex-col items-center lg:items-end text-center lg:text-right space-y-2 sm:space-y-4 p-2 sm:p-4 rounded-2xl group/frontend">
+                <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white tracking-wide leading-tight transition-all duration-300 transform group-hover/frontend:scale-105 cursor-pointer">
                   <span className="inline-block transition-transform duration-300 group-hover/frontend:-translate-y-1 hover:text-slate-100">Front End</span> <br />
-                  <span className="text-cyan-400 inline-block transition-all duration-300 group-hover/frontend:scale-110 group-hover/frontend:drop-shadow-[0_0_25px_rgba(34,211,238,0.8)]">Engineering</span>
+                  <span className="text-cyan-400 inline-block transition-all duration-300 group-hover/frontend:scale-105 group-hover/frontend:drop-shadow-[0_0_25px_rgba(34,211,238,0.8)]">Engineering</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-300 max-w-xs leading-relaxed font-light transition-colors group-hover/frontend:text-slate-100">
                   Crafting pixel-perfect, responsive user interfaces & high-performance web applications.
@@ -198,20 +198,20 @@ export default function Home() {
             </div>
 
             {/* Cyborg Hero Image - Automatically Responsive */}
-            <div className="flex justify-center items-center w-full max-w-[240px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[500px] shrink-0 my-2 lg:my-0">
+            <div className="flex justify-center items-center w-full max-w-[240px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[360px] xl:max-w-[440px] shrink-0 my-2 lg:my-0">
               <img
                 src="./portfolioHero.png"
                 alt="Hero Background"
-                className="w-full h-auto object-contain max-h-[45vh] sm:max-h-[60vh] transform transition-transform duration-300 hover:scale-105 filter hover:drop-shadow-[0_0_30px_rgba(63,209,255,0.4)]"
+                className="w-full h-auto object-contain max-h-[35vh] sm:max-h-[50vh] transform transition-transform duration-300 hover:scale-105 filter hover:drop-shadow-[0_0_30px_rgba(63,209,255,0.4)]"
               />
             </div>
 
             {/* Back End Section */}
             <div className="flex justify-center lg:justify-start items-center w-full flex-1">
-              <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-2 sm:space-y-4 p-2 sm:p-6 rounded-2xl group/backend">
-                <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-wide leading-tight transition-all duration-300 transform group-hover/backend:scale-105 cursor-pointer">
+              <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left space-y-2 sm:space-y-4 p-2 sm:p-4 rounded-2xl group/backend">
+                <h2 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white tracking-wide leading-tight transition-all duration-300 transform group-hover/backend:scale-105 cursor-pointer">
                   <span className="inline-block transition-transform duration-300 group-hover/backend:-translate-y-1 hover:text-slate-100">Back End</span> <br />
-                  <span className="text-indigo-400 inline-block transition-all duration-300 group-hover/backend:scale-110 group-hover/backend:drop-shadow-[0_0_25px_rgba(129,140,248,0.8)]">Engineering</span>
+                  <span className="text-indigo-400 inline-block transition-all duration-300 group-hover/backend:scale-105 group-hover/backend:drop-shadow-[0_0_25px_rgba(129,140,248,0.8)]">Engineering</span>
                 </h2>
                 <p className="text-xs sm:text-sm lg:text-md text-slate-300 max-w-xs leading-relaxed font-light transition-colors group-hover/backend:text-slate-100">
                   Architecting robust REST APIs, cloud infrastructure & scalable databases.
