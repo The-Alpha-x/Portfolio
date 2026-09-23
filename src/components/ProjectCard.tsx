@@ -82,13 +82,13 @@ export default function ProjectCard({
     <>
       <div className="group relative flex flex-col justify-between rounded-2xl bg-slate-900/50 border border-slate-800 backdrop-blur-md hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_rgba(34,211,238,0.15)] overflow-hidden">
         {/* Card Header & Link */}
-        <div className="p-6 pb-4">
+        <div className="p-4 sm:p-6 pb-3 sm:pb-4">
           <div className="flex justify-between items-start mb-3">
             <div className="flex items-center space-x-2">
-              <div className="p-2 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-400">
-                <Rocket className="w-5 h-5" />
+              <div className="p-1.5 sm:p-2 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-400">
+                <Rocket className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <span className="text-xs font-mono text-cyan-400/80 uppercase tracking-wider">Project</span>
+              <span className="text-[10px] sm:text-xs font-mono text-cyan-400/80 uppercase tracking-wider">Project</span>
             </div>
             <a
               href={link}
@@ -100,13 +100,13 @@ export default function ProjectCard({
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
-          <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors">
+          <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors">
             {title}
           </h3>
         </div>
 
         {/* Landscape Image Carousel (16:9 Aspect Ratio) */}
-        <div className="relative w-full px-6 mb-4">
+        <div className="relative w-full px-4 sm:px-6 mb-4">
           <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-950 border border-slate-800/90 group/carousel">
             {/* Scrollable Container */}
             <div
@@ -191,16 +191,16 @@ export default function ProjectCard({
         </div>
 
         {/* Card Content & Description */}
-        <div className="px-6 pb-6 flex-1 flex flex-col justify-between">
-          <p className="text-slate-400 text-sm leading-relaxed mb-6 font-light">
+        <div className="px-4 sm:px-6 pb-4 sm:pb-6 flex-1 flex flex-col justify-between">
+          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 font-light">
             {description}
           </p>
 
-          <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-3 sm:pt-4 border-t border-slate-800/80">
             {tags.map((tag, tIdx) => (
               <span
                 key={tIdx}
-                className="px-2.5 py-1 text-xs font-mono rounded-md bg-cyan-950/60 border border-cyan-800/40 text-cyan-300"
+                className="px-2 sm:px-2.5 py-0.5 sm:py-1 text-[11px] sm:text-xs font-mono rounded-md bg-cyan-950/60 border border-cyan-800/40 text-cyan-300"
               >
                 {tag}
               </span>
@@ -212,17 +212,17 @@ export default function ProjectCard({
       {/* Fullscreen Image Lightbox Modal */}
       {fullscreenImageIndex !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/90 backdrop-blur-md animate-fadeIn"
           onClick={() => setFullscreenImageIndex(null)}
         >
           <div
-            className="relative max-w-5xl w-full aspect-video rounded-2xl overflow-hidden border border-cyan-500/40 bg-slate-950 shadow-2xl flex items-center justify-center group/modal"
+            className="relative max-w-5xl w-full max-h-[90vh] rounded-2xl overflow-hidden border border-cyan-500/40 bg-slate-950 shadow-2xl flex items-center justify-center group/modal p-2 sm:p-4"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={displayImages[fullscreenImageIndex]}
               alt={`${title} snapshot ${fullscreenImageIndex + 1}`}
-              className="w-full h-full object-contain"
+              className="w-auto h-auto max-w-full max-h-[80vh] object-contain rounded-lg"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src = DEFAULT_IMAGE;
               }}
@@ -233,34 +233,34 @@ export default function ProjectCard({
               <>
                 <button
                   onClick={handleModalPrev}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-slate-900/80 border border-slate-700 text-slate-200 hover:text-cyan-400 hover:bg-slate-800 transition-all shadow-lg backdrop-blur-md"
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-2.5 rounded-full bg-slate-900/80 border border-slate-700 text-slate-200 hover:text-cyan-400 hover:bg-slate-800 transition-all shadow-lg backdrop-blur-md z-10"
                   aria-label="Previous snapshot"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
 
                 <button
                   onClick={handleModalNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-slate-900/80 border border-slate-700 text-slate-200 hover:text-cyan-400 hover:bg-slate-800 transition-all shadow-lg backdrop-blur-md"
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-2.5 rounded-full bg-slate-900/80 border border-slate-700 text-slate-200 hover:text-cyan-400 hover:bg-slate-800 transition-all shadow-lg backdrop-blur-md z-10"
                   aria-label="Next snapshot"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
               </>
             )}
 
             {/* Modal Counter */}
-            <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900/80 border border-slate-700 text-xs font-mono text-cyan-300 backdrop-blur-md">
+            <div className="absolute top-2 left-2 sm:top-4 sm:left-4 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 border border-slate-700 text-[10px] sm:text-xs font-mono text-cyan-300 backdrop-blur-md z-10">
               {fullscreenImageIndex + 1} / {displayImages.length}
             </div>
 
             {/* Modal Close Button */}
             <button
               onClick={() => setFullscreenImageIndex(null)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-slate-900/80 text-slate-300 hover:text-white border border-slate-700 hover:bg-slate-800 transition-colors"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 p-1.5 sm:p-2 rounded-full bg-slate-900/80 text-slate-300 hover:text-white border border-slate-700 hover:bg-slate-800 transition-colors z-10"
               aria-label="Close modal"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>
@@ -268,3 +268,4 @@ export default function ProjectCard({
     </>
   );
 }
+
