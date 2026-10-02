@@ -111,7 +111,7 @@ export default function Home() {
     ? techItems
     : techItems.filter((item) => item.category === activeFilter);
 
-  const cvPath = "/Nirmal Amanda CV Resume.pdf";
+  const cvPath = "./Nirmal_Amanda_CV_Resume.pdf";
 
   return (
     <VantaBackground>
